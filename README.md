@@ -18,7 +18,6 @@ docker build . -f Dockerfile.init -t reactnativeapp
 
 ### 3. Create react native project
 
-??? docker run -it --rm -v ${PWD}/reactnativeapp:/app reactnativeapp yarn init
 docker run -it --rm -v ${PWD}/reactnativeapp:/app reactnativeapp yarn add expo
 docker run -it --rm -v ${PWD}/reactnativeapp:/app reactnativeapp yarn run expo init reactnativeapp .
 
@@ -54,9 +53,8 @@ APP_NAME=reactnativeapp
 docker build . -f Dockerfile -t ${APP_NAME} && \
 docker run --name="react-native-app" -p 7001:7001 -it --rm -v ${PWD}:/app -v ${APP_NAME}_nodemodules:/app/node_modules $@
 
-### 3. Instll env again
+### 3. Install env again
 
-????? bash start.sh yarn init
 bash start.sh yarn add expo
 bash start.sh yarn run expo init reactnativeapp .
 
@@ -73,11 +71,11 @@ vim reactnativeapp/src/App.js
 
 ### 1. Add some library
 
-bash run.sh yarn add styled-components
+bash start.sh yarn add styled-components
 
 ### 2. Build project
 
-bash run.sh yarn build
+bash start.sh yarn build
 
 ### 3. Cleanup
 
