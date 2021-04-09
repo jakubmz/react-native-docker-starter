@@ -83,3 +83,9 @@ bash run.sh yarn build
 
 docker image rm reactnativeapp
 docker volume rm reactnativeapp_nodemodules
+
+Overall Docker cleanup
+
+docker network prune
+docker volume prune
+docker image prune
